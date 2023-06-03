@@ -1,6 +1,5 @@
 body {
     background-color: rgb(56, 58, 58);
-    height: 100vh;
 }
 
 * {
@@ -8,7 +7,7 @@ body {
 }
 
 
-/** Menü CSS Başlangıç */
+/********************** Menü CSS Başlangıç ****************************/
 
 .navbar {
     background-color: black;
@@ -72,12 +71,12 @@ body {
     border-radius: 50%;
 }
 
-.profil-ok{
+.profil-ok {
     cursor: pointer;
-    
+
 }
 
-.profil-text{
+.profil-text {
     display: flex;
     align-items: center;
     column-gap: 4px;
@@ -86,9 +85,9 @@ body {
 
 .toggle {
     background-color: whitesmoke;
-    width:40px;
+    width: 40px;
     border-radius: 12px;
-    padding:2px;
+    padding: 2px;
     position: relative;
     display: flex;
     align-items: center;
@@ -99,7 +98,7 @@ body {
     color: goldenrod;
 }
 
-.toggle-ball{
+.toggle-ball {
     width: 18px;
     height: 18px;
     background-color: black;
@@ -114,7 +113,7 @@ body {
     color: whitesmoke;
     height: 100%;
     min-height: min-content;
-    width: 50px;  
+    width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,16 +122,89 @@ body {
     position: fixed;
 }
 
-.sidebar i{
+.sidebar i {
     font-size: 20px;
     cursor: pointer;
 }
 
-.sidebar i:hover{
+.sidebar i:hover {
     color: rgb(255, 0, 0);
     font-size: 20px;
     cursor: pointer;
     transition: 0.4s;
 }
 
-/** Menü CSS Bitiş */
+/*************************************** Menü CSS Bitiş ***************************************/
+
+
+
+/************************************ Ana Content Başlangıç ***********************************/
+
+.content-wrapper {
+    margin-left: 50px;
+}
+
+.featured-content {
+    background: url(Pictures/batman-dc-superheroes-dc-comics-cosplay-3840x2160-954.jpg);
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* calc() metoduyla bu tarz işlemler yapabiliriz.*/
+
+}
+
+.featured-title-logo {
+    width: 30%;
+    height: 30%;
+    left: 5%;
+    min-width: min-content;
+    object-fit: cover;
+    position: static;
+
+
+}
+
+.featured-description {
+    width: 25%;
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: rgba(41, 41, 41, 0.323);
+}
+
+.featured-button {
+    
+    height: 35px;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.featured-button button {
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.747);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.featured-button button:hover {
+    padding-right: 10.5%;
+    border-radius: 6px; 
+    background-color: rgba(255, 0, 0, 0.724);
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+
+
+
+/************************************** Ana Content Bitiş ************************************/
