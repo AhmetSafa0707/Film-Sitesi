@@ -8,7 +8,7 @@ body {
 }
 
 
-.container{
+.container {
     background-color: black;
     color: white;
 }
@@ -190,7 +190,7 @@ body {
 }
 
 .featured-button {
-    
+
     height: 35px;
     margin-left: 50px;
     margin-top: 10px;
@@ -211,7 +211,7 @@ body {
 
 .featured-button button:hover {
     padding-right: 10.5%;
-    border-radius: 6px; 
+    border-radius: 6px;
     background-color: rgba(255, 0, 0, 0.724);
     color: rgb(255, 255, 255);
     transition: 1s;
@@ -221,46 +221,53 @@ body {
 
 /************************************** Film Kategori Başlangıç ******************************/
 
-.movie-list-filter{
+.movie-list-filter {
     margin: 25px 0 20px 50px;
-    padding: 20px;   
+    padding: 20px;
 }
-.movie-list-filter select{
+
+.movie-list-filter select {
     width: 150px;
     font-size: 18px;
-    background-color: black;
+    background-color: wheat;
+    border: 2px solid white;
+    border-radius: 3px;
     color: whitesmoke;
     border: none;
 }
 
-.movie-list-container{
-margin-left: 70px;
-margin-bottom: 170px;
+.movie-list-container {
+    margin-left: 70px;
+    margin-bottom: 170px;
+    position: relative;
 }
-.movie-list{
+
+.movie-list {
     list-style: none;
     padding: 0;
     height: 300px;
     display: flex;
     align-items: center;
     column-gap: 30px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
 }
 
-.movie-item{
+.movie-item {
     margin-top: 50px;
     position: relative;
 }
 
-.movie-list-wrapper{
-margin-top: 40px;
+.movie-list-wrapper {
+    margin-top: 40px;
 }
 
-.movie-list-title{
+.movie-list-title {
     font-size: 45px;
-    }
+}
 
 .movie-item:hover .movie-item-title,
-.movie-item:hover .movie-item-buttons{
+.movie-item:hover .movie-item-buttons {
     opacity: 1;
     transition: 1s;
     margin: 0 10px;
@@ -268,20 +275,20 @@ margin-top: 40px;
 
 }
 
-.movie-item:hover .movie-item-img{
+.movie-item:hover .movie-item-img {
     opacity: 0.8;
     margin: 0 10px;
     transition: 1s;
 }
 
-.movie-item-img{
-   width: 270px;
-   height: 360px;
-   transition: 0.7s;
-    
+.movie-item-img {
+    width: 270px;
+    height: 360px;
+    transition: 0.7s;
+
 }
 
-.movie-item-title{
+.movie-item-title {
     background-color: rgba(0, 0, 0, 0.891);
     font-size: 26px;
     font-weight: bold;
@@ -293,34 +300,196 @@ margin-top: 40px;
     transition: 1s all ease-in-out;
 }
 
-.movie-item-buttons{
+.movie-item-buttons {
     background-color: rgba(16, 15, 15, 0.796);
     padding: 10px;
+    border-radius: 3px;
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    bottom:3.5px;
+    bottom: 3.5px;
     left: 50px;
     display: flex;
     column-gap: 20px;
-    opacity: 0;  
+    opacity: 0;
     text-align: center;
-    transition: 1s all ease-in-out;}
+    transition: 1s all ease-in-out;
+}
 
-.movie-item-buttons i{
+.movie-item-buttons i {
     cursor: pointer;
     opacity: .5;
     font-size: 20px;
     transition: 0.5s all ease;
 }
-.movie-item-buttons i:hover{
+
+.movie-item-buttons i:hover {
     cursor: pointer;
     opacity: 1;
     font-size: 20px;
     transition: 0.5s all ease;
 }
 
+.fa-chevron-right {
+    color: rgba(255, 255, 255, 0.55);
+    display: flex;
+    width: 80px;
+    height: 120px;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    transition: 0.4s all ease;
+}
 
+.fa-chevron-right:hover {
+    color: rgb(255, 255, 255);
+    transition: 1s all ease;
+    cursor: pointer;
+}
 
 
 /************************************** Film Kategori Bitiş ******************************/
+
+
+/************************************** Dark Mode Başlangıç ******************************/
+
+.container.active {
+    background-color: white;
+}
+
+.navbar.active {
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active {
+    background-color: white;
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-24px);
+}
+
+.menu-list-item.active {
+    margin-right: 15px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    transition: 0.5s all ease;
+}
+
+.logo.active {
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    letter-spacing: 5px;
+    font-size: 26px;
+}
+
+.featured-button button.active {
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.featured-button button:hover.active {
+    padding-right: 10.5%;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.724);
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.movie-list-filter select.active {
+    width: 150px;
+    font-size: 18px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: black;
+    
+}
+
+.movie-item-title.active {
+    background-color: white;
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -10%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    transition: 1s all ease-in-out;
+}
+
+.movie-item:hover .movie-item-img.active {
+    opacity: 0.95;
+    margin: 0 10px;
+    transition: 1s;
+}
+
+.movie-item-buttons.active {
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3.5px;
+    left: 50px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    text-align: center;
+    transition: 1s all ease-in-out;
+}
+
+.movie-item-buttons i.active {
+    cursor: pointer;
+    opacity: .8;
+    font-size: 20px;
+    transition: 0.5s all ease;
+}
+
+.movie-item-buttons i:hover.active {
+    cursor: pointer;
+    opacity: 1;
+    font-size: 20px;
+    transition: 0.5s all ease;
+}
+
+.fa-chevron-right.active {
+    color: rgba(255, 255, 255, 0.381);
+    display: flex;
+    width: 80px;
+    height: 120px;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    transition: 0.4s all ease;
+}
+
+.fa-chevron-right:hover.active {
+    color: rgba(255, 255, 255, 0.737);
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+/**************************************** Dark Mode Bitiş ********************************/
