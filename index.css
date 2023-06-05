@@ -117,6 +117,7 @@ body {
     cursor: pointer;
     position: absolute;
     right: 1px;
+    transition: 0.3s all ease;
 }
 
 .sidebar {
@@ -137,6 +138,7 @@ body {
 .sidebar i {
     font-size: 20px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .sidebar i:hover {
@@ -195,7 +197,8 @@ body {
     margin-left: 50px;
     margin-top: 10px;
     display: flex;
-    column-gap: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .featured-button button {
@@ -229,11 +232,11 @@ body {
 .movie-list-filter select {
     width: 150px;
     font-size: 18px;
-    background-color: wheat;
+    background-color: black;
     border: 2px solid white;
     border-radius: 3px;
-    color: whitesmoke;
-    border: none;
+    color: white;
+    padding: 5px;
 }
 
 .movie-list-container {
@@ -264,6 +267,7 @@ body {
 
 .movie-list-title {
     font-size: 45px;
+    color: white;
 }
 
 .movie-item:hover .movie-item-title,
@@ -289,7 +293,7 @@ body {
 }
 
 .movie-item-title {
-    background-color: rgba(0, 0, 0, 0.891);
+   
     font-size: 26px;
     font-weight: bold;
     position: absolute;
@@ -355,16 +359,16 @@ body {
 /************************************** Dark Mode Başlangıç ******************************/
 
 .container.active {
-    background-color: white;
+    background-color: rgb(207, 207, 207);
 }
 
 .navbar.active {
-    background-color: white;
+    background-color:rgb(165, 165, 165);
     color: black;
 }
 
 .sidebar.active {
-    background-color: white;
+    background-color:rgb(204, 204, 204);
     color: black;
 }
 
@@ -381,6 +385,16 @@ body {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(0, 0, 0);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    transition: 0.5s all ease;
+}
+.menu-list-item:hover.active {
+    margin-right: 15px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 0, 0);
     cursor: pointer;
     letter-spacing: 0.5px;
     font-weight: lighter;
@@ -424,8 +438,13 @@ body {
     
 }
 
+.movie-list-title.active {
+    font-size: 45px;
+    color: black;
+}
+
 .movie-item-title.active {
-    background-color: white;
+    
     color: black;
     font-size: 26px;
     font-weight: bold;
@@ -493,3 +512,45 @@ body {
 }
 
 /**************************************** Dark Mode Bitiş ********************************/
+
+/**************************************** Responsive Başlangıç ***************************/
+
+@media only screen and (max-width:900px){
+    .menu-container{
+        display: none;
+    }
+   
+
+
+    .featured-title{
+        display: none;
+    }
+
+    .featured-content{
+        height: 50vh;
+    }
+
+    .featured-description{
+        overflow: hidden;
+        text-align: start;
+        width: 60%;
+        padding: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (max-width:764px){
+    .menu-list{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/**************************************** Responsive Bitiş *******************************/
